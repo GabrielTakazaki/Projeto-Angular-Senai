@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="meucss">
+        <div class="form-group">
+            <h1 class="text-center text-primary">TODO App</h1>
+            <div class="input-group-prepend">
+                <input type="text" class="form-control" placeholder="Add Todo" name="todo" #valor>
+                <span class="input-group-text" (click)="addValor(valor.value); valor.value=''">
+            <i class="material-icons">add</i>
+          </span>
+            </div>
+            <div class="data">
+                <ul class="list-instyled">
+                    <li *ngFor="let valor of listaArray; let i = index">{{valor}}
+                        <i class="material-icons" (click)="delValor(i)">delete</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

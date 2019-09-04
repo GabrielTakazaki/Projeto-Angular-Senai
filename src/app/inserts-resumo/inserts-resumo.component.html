@@ -1,0 +1,28 @@
+<app-painel-simples col="6" tipo="info" titulo1="Consultas Anteriores" titulo2="Consultas Marcadas" titulo3="Faturamento" titulo4="Precisão">
+    <div principal>
+        <p>Total de consultas: {{resumo.consultas.anteriores.total}} </p>
+        <ul>
+            <li *ngFor="let espec of resumo.consultas.anteriores.detalhes">
+                <p>Especialidade: {{espec.especialidade}}</p>
+                <p>Quantidade: {{espec.quantidade}}</p>
+            </li>
+        </ul>
+    </div>
+    <div auxiliar>
+        <p>Total {{resumo.consultas.marcadas.total}}</p>
+        <ul>
+            <li *ngFor="let consultasMarcadas of resumo.consultas.marcadas.detalhes">
+                <p>Especialidade: {{consultasMarcadas.especialidade}}</p>
+                <p>Quantidade: {{consultasMarcadas.quantidade}}</p>
+            </li>
+        </ul>
+    </div>
+    <div faturamento>
+        <p>Faturamento anterior R${{resumo.faturamento.anterior.valor}}</p>
+        <p>Comparativo anterior R${{resumo.faturamento.anterior.comparativo}}</p>
+    </div>
+    <div precisao>
+        <p>Precisão do Faturamento R${{resumo.faturamento.precisao.valor}}</p>
+        <p>Precisçao do Comparativo R${{resumo.faturamento.precisao.comparativo}}</p>
+    </div>
+</app-painel-simples>

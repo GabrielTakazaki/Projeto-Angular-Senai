@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-sm-{{col}} ">
+        <div class="card">
+            <div class="card-head bg-{{tipo}}">
+                <h3 class="card-title">{{titulo1}}</h3>
+            </div>
+            <div class="card-body">
+                <ng-content select="[principal]"></ng-content>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-{{col}} ">
+        <div class="card">
+            <div class="card-head bg-{{tipo}}">
+                <h3 class="card-title">{{titulo2}}</h3>
+            </div>
+            <div class="card-body">
+                <ng-content select="[auxiliar]"></ng-content>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-{{col}} ">
+        <div class="card">
+            <div class="card-head bg-{{tipo}}">
+                <h3 class="card-title">{{titulo3}}</h3>
+            </div>
+            <div class="card-body">
+                <ng-content select="[faturamento]"></ng-content>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-{{col}} ">
+        <div class="card">
+            <div class="card-head bg-{{tipo}}">
+                <h3 class="card-title">{{titulo4}}</h3>
+            </div>
+            <div class="card-body">
+                <ng-content select="[precisao]"></ng-content>
+            </div>
+        </div>
+    </div>
+</div>
